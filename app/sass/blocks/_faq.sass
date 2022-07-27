@@ -1,0 +1,87 @@
+.faq
+  padding-top: 100px
+  padding-bottom: 100px
+  padding-right: 215px
+  @include mini-desktop
+    padding-right: 20px
+  @include mini-tablets
+    padding-top: 75px
+    padding-bottom: 75px
+  @include mini-phones
+    padding-top: 60px
+    padding-bottom: 60px
+  &-title
+    color: #1EEBCD
+    font-feature-settings: 'pnum' on, 'lnum' on
+    font-size: 64px
+    margin: 0
+    @include mini-tablets
+      font-size: 32px
+  &-text
+    font-size: 24px
+    margin: 60px 0
+    @include mini-tablets
+      font-size: 18px
+      margin: 30px 0
+  &-btn
+    border-color: #1EEBCD
+    color: #1EEBCD
+    width: 100%
+  &-columns
+    @include laptop
+      flex-wrap: wrap
+      gap: 100px
+    @include mini-tablets
+      gap: 60px
+  &-column
+    width: 51.8%
+    &:first-child
+      width: 37.41%
+    @include laptop
+      width: 100%
+      &:first-child
+        width: 100%
+  &-item
+    padding-left: 75px
+    margin-bottom: 60px
+    @include mini-tablets
+      padding-left: 60px
+    &:last-child
+      margin-bottom: 0
+    &-title
+      font-size: 36px
+      position: relative
+      cursor: pointer
+      @include mini-tablets
+        font-size: 24px
+      &::before
+        content: ''
+        position: absolute
+        left: -75px 
+        top: 5px
+        width: 40px
+        height: 40px
+        background: url(../img/triangle.svg) center center no-repeat
+        background-size: contain
+        transition: 0.5s
+        @include mini-tablets
+          top: -5px
+          left: -60px
+      &.active-style
+        &::before
+          transform: rotate(90deg)
+    &-text
+      font-size: 24px
+      height: 0
+      visibility: hidden
+      margin-top: 0
+      transform: scaleY(0)
+      transform-origin: 0 0
+      transition: all 0.5s
+      @include mini-tablets
+        font-size: 18px
+      &.active-content
+        margin-top: 35px
+        height: auto
+        visibility: visible
+        transform: scaleY(1)

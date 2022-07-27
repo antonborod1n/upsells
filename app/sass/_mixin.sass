@@ -1,0 +1,41 @@
+// mixins популярных брекпоинтов
+@mixin desktop 
+  @media screen and (max-width: 1450px) 
+    @content
+
+@mixin mini-desktop 
+  @media screen and (max-width: 1300px) 
+    @content
+
+@mixin laptop 
+  @media screen and (max-width: 1024px) 
+    @content
+    
+@mixin max-tablets 
+  @media screen and (max-width: 992px) 
+    @content
+
+@mixin tablets 
+  @media screen and (max-width: 768px)  
+    @content
+
+@mixin mini-tablets 
+  @media screen and (max-width: 680px) 
+    @content
+    
+
+@mixin phones 
+  @media screen and (max-width: 576px) 
+    @content
+
+@mixin mini-phones 
+  @media screen and (max-width: 390px) 
+    @content
+
+@mixin img100
+  width: 100%
+  height: 100%
+  object-fit: contain  
+@mixin Roboto
+  font-family: 'Roboto', sans-serif
+  font-weight: 400

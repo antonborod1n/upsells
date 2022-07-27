@@ -1,0 +1,54 @@
+.advantages
+  gap: 30px
+  padding-bottom: 100px
+  @include laptop
+    flex-wrap: wrap  
+  @include mini-tablets
+    padding-bottom: 75px
+  @include mini-phones
+    padding-bottom: 60px
+  &-column
+    width: calc(50% - 15px)
+    @include laptop
+      width: 100%
+  &-title
+    font-size: 64px
+    margin-bottom: 100px
+    max-width: 630px
+    @include mini-tablets
+      font-size: 32px
+      margin-bottom: 50px
+  &-img
+    @include laptop
+      margin: 0 auto 60px
+    @include mini-tablets
+      margin: 0 auto 50px
+  &-list
+    gap: 60px
+    & li
+      font-size: 24px
+      @include mini-tablets
+        font-size: 18px
+      & img
+        display: block
+        width: 201px
+        height: 189px
+        object-fit: contain
+        @include mini-tablets
+          width: 164px
+          height: 172px
+      & strong
+        display: block
+        font-weight: 700
+        font-size: 36px
+        font-feature-settings: 'pnum' on, 'lnum' on
+        color: #1EEBCD
+        margin:  25px 0
+        @include mini-tablets
+          font-size: 24px
+  &-btn
+    margin-top: 60px
+    display: none
+    width: 100%
+    @include laptop
+      display: block

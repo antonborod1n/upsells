@@ -1,0 +1,217 @@
+.keys
+  padding-top: 100px
+  padding-bottom: 100px
+  @include mini-tablets
+    padding-top: 75px
+    padding-bottom: 75px
+  @include mini-phones
+    padding-top: 60px
+    padding-bottom: 60px
+  &-title
+    font-size: 64px
+    margin-bottom: 100px
+    max-width: 740px
+    @include mini-tablets
+      font-size: 32px
+      margin-bottom: 50px
+  &-slider
+    & .slick-arrow
+      position: absolute
+      top: 24px
+      left: 38%
+      font-size: 0
+      display: flex
+      background: #0E2E29
+      width: 64px
+      height: 64px
+      border-radius: 50%
+      border: 0
+      cursor: pointer
+      z-index: 100
+      transition: 0.5s
+      &::after
+        content: ''
+        margin: auto
+        width: 40px
+        height: 40px
+        background: url(../img/arrow-right.svg) center center no-repeat
+        background-size: contain
+      @include mini-phones
+        width: 40px
+        height: 40px
+        &::after
+          width: 25px
+          height: 25px
+      &.slick-next
+        margin-left: 80px
+        &::after
+          transform: rotate(180deg)
+      &:hover
+        background: #1EEBCD
+        &::after
+          filter: invert(1)
+      @include laptop
+        top: 0
+        left: auto
+        right: 0
+        margin-right: 80px
+        &.slick-next
+          margin: 0
+      @include mini-phones
+        margin-right: 50px
+        top: 10px
+  &-card
+    gap: 60px
+    @include laptop
+      flex-wrap: wrap
+    @include mini-tablets
+      gap: 50px
+    &-column
+      width: 600px
+      &:first-child
+        width: 630px
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-start
+        justify-content: space-between
+        gap: 30px
+        @include mini-tablets
+          gap: 50px 20px
+      @include laptop
+        width: 100%
+        &:first-child
+          width: 100%
+    &-heading
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+      width: 100%
+      @include mini-tablets
+        margin: 0
+    &-avatar
+      width: 100px
+      height: 100px
+      border-radius: 50%
+      object-fit: cover
+      background: #C4C4C4
+      margin-right: 40px
+      @include mini-tablets
+        width: 40px
+        height: 40px
+        margin-right: 20px
+      @include mini-phones
+        width: 60px
+        height: 60px
+        margin-right: 10px
+    &-data
+      font-size: 24px
+      & strong
+        font-weight: 700
+        display: block
+        font-size: 36px
+        margin-bottom: 10px
+      @include mini-tablets
+        font-size: 18px
+        & strong
+          font-size: 18px
+    &-compare
+      width: calc(50% - 15px)
+      font-size: 24px
+      @include mini-tablets
+        width: calc(50% - 10px)
+        font-size: 18px
+      & strong
+        display: block
+        font-size: 36px
+        margin-bottom: 30px
+        @include mini-tablets
+          font-size: 24px
+      &>span
+        background: #1EEBCD
+        border-radius: 10px
+        color: #020E0C
+        font-feature-settings: 'pnum' on, 'lnum' on
+        display: block
+        text-align: center
+        padding: 25px 0
+        font-weight: 700
+        &:nth-of-type(2)
+          padding: 35px 0
+          margin: 30px 0
+        &:nth-of-type(3)
+          padding: 60px 0
+        @include mini-tablets
+          padding: 29.5px 0
+          &:nth-of-type(2)
+            padding: 39.5px 0
+          &:nth-of-type(3)
+            padding: 64.5px 0
+        @include mini-phones
+          &:nth-of-type(2)
+            margin: 20px 0
+      &>div
+        &:first-of-type
+          @include mini-tablets
+            padding-top: 21px
+          @include mini-phones
+            padding-top: 0
+        & span
+          display: block
+          &:last-child
+            margin-top: 10px
+            text-align: center
+            background: #0E2E29
+            border-radius: 10px
+        &:nth-of-type(2)
+          margin: 30px 0 58px
+          @include mini-tablets
+            margin: 39px 0 67px
+          @include mini-phones
+            margin: 26px 0 30px
+          & span
+            &:last-child
+              padding: 12px
+              @include mini-tablets
+                padding: 16.5px
+        &:nth-of-type(3)
+          & span
+            &:last-child
+              padding: 23px 20px
+              @include mini-tablets
+                padding: 27.5px
+    &-content
+      font-size: 24px
+      padding: 60px
+      position: relative
+      border-radius: 10px
+      z-index: 2
+      overflow: hidden
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: -1
+        margin: 1.5px
+        background: linear-gradient( rgba(2, 14, 21, 0.01), rgba(2, 14, 21, 0.01))
+        background-clip: content-box
+        backdrop-filter: blur(40px)
+        border: 3px solid
+        border-image: linear-gradient(347.19deg, #BEFFF6 4.44%, #020E0C 48.15%) 1
+      & strong
+        font-size: 36px
+        margin-bottom: 60px
+        display: block
+      @include mini-tablets
+        padding: 30px
+        font-size: 18px
+        & strong
+          font-size: 24px
+          margin-bottom: 30px
+      @include mini-phones
+        padding: 0
+        &::before
+          display: none
+

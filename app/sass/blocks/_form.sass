@@ -1,0 +1,59 @@
+.form
+  & form
+    gap: 30px
+    @include tablets
+      flex-wrap: wrap
+      gap: 0
+  &-column
+    width: calc(50% - 15px)
+    @include tablets
+      width: 100%
+  &-checkbox.mobile
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 30px
+    @include tablets
+      display: flex
+    @include mini-tablets
+      flex-wrap: wrap
+      margin-top: 20px
+      gap: 20px
+  & input, & textarea
+    background: #175752
+    border-radius: 10px
+    padding: 25px 20px 
+    color: #fff
+    border: 3px solid #175752
+    display: block
+    width: 100%
+    margin-bottom: 20px
+    &:focus
+      border-color: #1EEBCD
+  & textarea
+    height: 194px
+  & button
+    width: 100%
+  & input
+    &[type="radio"], &[type="checkbox"]
+      position: absolute
+      left: -9999px
+      & + span
+        display: flex
+        align-items: flex-start
+        cursor: pointer
+        margin-bottom: 20px
+        @include tablets
+          margin-bottom: 0
+        &::before
+          content: ''
+          border: 2px solid #FFFFFF
+          border-radius: 3px
+          width: 16px
+          min-width: 16px
+          height: 16px
+          transition: background-color 0.5s
+          margin: 6px 20px 0 0
+      &:checked
+        & + span
+          &::before
+            background-color: #1EEBCD

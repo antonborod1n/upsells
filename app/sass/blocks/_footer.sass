@@ -1,0 +1,90 @@
+.footer
+  @include laptop
+    padding: 0
+  &-container
+    position: relative
+    border-radius: 10px 10px 0 0 
+    z-index: 2
+    overflow: hidden
+    padding: 60px
+    @include laptop
+      padding: 35px 20px
+    @include max-tablets
+      padding: 60px 20px
+      flex-wrap: wrap
+    @include mini-tablets
+      padding: 50px 20px
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: -1
+      margin: 1.5px
+      background: linear-gradient( rgba(2, 14, 21, 0.01), rgba(2, 14, 21, 0.01))
+      background-clip: content-box
+      backdrop-filter: blur(40px)
+      border: 3px solid
+      border-bottom: 0
+      border-image: linear-gradient(278.45deg, #BEFFF6 4.63%, #020E0C 88.5%) 1
+      @include mini-tablets
+        border: 0
+        margin: 0
+  &-logo
+    width: 128px
+    height: 42px
+    margin: 0 54px 0 60px
+    @include laptop
+      margin: 0 60px 0 0
+    @include max-tablets
+      display: block
+    & img
+      width: 100%
+      height: 100%
+      object-fit: contain 
+  &-menu
+    font-size: 24px
+    & ul
+      gap: 60px
+    @include max-tablets
+      width: 100%
+      margin-top: 30px
+      & ul
+        gap: 30px
+        flex-wrap: wrap
+    @include mini-phones
+      & ul
+        gap: 20px
+  &-contacts
+    margin-left: auto
+    @include laptop
+      text-align: right
+    @include max-tablets
+      position: absolute
+      right: 20px
+      top: 66px
+    @include mini-tablets
+      position: initial
+      margin-top: 20px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 86%
+      margin-left: 0
+      flex-wrap: wrap
+      gap: 20px
+  &-contact
+    font-size: 24px
+    font-weight: 700
+    display: block
+  &-phone
+    margin-right: 30px
+    @include laptop
+      margin-right: 0
+      margin-bottom: 20px
+    @include max-tablets
+      margin-bottom: 30px
+    @include mini-tablets
+      margin-bottom: 0

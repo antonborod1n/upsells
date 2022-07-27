@@ -1,0 +1,125 @@
+.comparison
+  padding-top: 100px
+  padding-bottom: 100px
+  @include mini-tablets
+    padding-top: 75px
+    padding-bottom: 75px
+    @include mini-phones
+      padding-top: 60px
+      padding-bottom: 60px
+  &-title
+    font-size: 64px
+    margin: 0
+    & small
+      font-size: 36px
+      display: block
+      margin-top: 248px
+      font-weight: 700
+      @include laptop
+        margin-top: 186px
+      @include max-tablets
+        display: none
+    @include max-tablets
+      margin-bottom: 80px
+    @include mini-tablets
+      font-size: 32px
+      margin-bottom: 50px
+  &-columns
+    gap: 30px
+    @include max-tablets
+      gap: 20px
+      flex-wrap: wrap
+  &-column
+    width: calc(33.33% - 15px)
+    @include max-tablets
+      width: calc(50% - 10px)
+    &-titles
+      &>span
+        font-size: 24px
+        display: block
+        margin-top: 40px
+        @include max-tablets
+          display: none
+      @include max-tablets
+        width: 100%
+    &:nth-of-type(2)
+      & .comparison-list
+        margin-right: -10px
+        & li
+          position: relative
+          &::after
+            content: attr(data-option)
+            position: absolute
+            display: none
+            left: 0
+            width: calc(100vw - 55px)
+            top: 20px
+            text-align: center
+            font-size: 24px
+            font-weight: 400
+            @include max-tablets
+              display: block
+            @include mini-tablets
+              font-size: 18px
+    &:nth-of-type(3)
+      & .comparison-list
+        margin-left: -10px
+  &-heading
+    margin-bottom: 55px
+    &-title
+      font-size: 36px
+      margin-bottom: 20px
+      display: block
+      font-weight: 700
+      @include mini-tablets
+        font-size: 24px
+        margin-bottom: 30px
+    &-price
+      font-size: 64px
+      font-weight: 700
+      display: block
+      margin-bottom: 20px
+      font-feature-settings: 'pnum' on, 'lnum' on
+      @include mini-tablets
+        font-size: 32px
+        margin-bottom: 30px
+      &--green
+        color: #1EEBCD
+    &-text
+      margin-bottom: 30px
+      font-size: 24px
+      @include mini-tablets
+        font-size: 18px
+    &-btn
+      width: 100%
+      box-shadow: unset
+  &-list
+    font-weight: 700
+    & li
+      font-size: 24px
+      display: flex
+      align-items: center
+      padding: 20px 0
+      border-top: 3px solid #0E2E29
+      @include max-tablets
+        padding: 80px 0 30px !important
+        justify-content: center
+      @include mini-tablets
+        font-size: 18px
+      &:first-of-type
+        padding-top: 0
+        border-top: 0
+      &:nth-of-type(5)
+        padding-bottom: 56px
+      &::before
+        content: ''
+        width: 24px
+        height: 24px
+        background: url(../ima/triangle.svg) center center no-repeat
+        margin-right: 15px
+      &.comparison-list--none
+        &::before
+          background: url(../img/triangle-empty.svg) center center no-repeat
+      @include laptop
+        &:nth-of-type(2), &:nth-of-type(4)
+          padding-bottom: 56px

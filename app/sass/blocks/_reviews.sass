@@ -1,0 +1,77 @@
+.reviews
+  padding-top: 80px
+  @include mini-phones
+    padding-top: 40px
+  &-title
+    font-size: 64px
+    margin-bottom: 100px
+    @include mini-tablets
+      font-size: 32px
+      margin-bottom: 50px
+  &-slider
+    gap: 30px
+    & .slick-list
+      overflow: unset
+      @include mini-tablets
+        overflow: hidden
+    & .slick-dots
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-top: 60px
+      & li
+        flex: 1
+        & button
+          background-color: #0E2E29
+          padding: 0
+          border: 0
+          font-size: 0
+          height: 6px
+          width: 100%
+          display: block
+          transition: background-color 0.5s
+          cursor: pointer
+        &.slick-active
+          & button
+            background-color: #1EEBCD
+  &-card
+    width: 630px
+    max-width: 100%
+    display: flex !important
+    align-items: center
+    flex-wrap: wrap
+    gap: 30px 20px
+    margin-right: 30px
+    @include mini-tablets
+      width: auto
+      max-width: calc(100vw - 40px)
+      margin-right: 0
+    &-text
+      padding: 30px
+      background: #0E2E29
+      border-radius: 10px
+      font-size: 24px
+      width: 100%
+      & strong
+        font-size: 36px
+        display: block
+        margin-bottom: 10px
+      @include mini-tablets
+        font-size: 18px
+        & strong
+          font-size: 24px
+      @include mini-phones
+        padding: 20px
+    &-avatar
+      width: 80px
+      height: 80px
+      object-fit: cover
+      border-radius: 50%
+      background: #C4C4C4
+    &-heading
+      font-size: 24px
+      & strong
+        display: block
+        margin-bottom: 10px
+      @include mini-tablets
+        font-size: 18px

@@ -1,0 +1,104 @@
+.pricing
+  padding-top: 100px
+  padding-bottom: 100px
+  overflow: hidden
+  background: url(../img/polygon-right.svg) right bottom no-repeat
+  background-size: auto
+  @include mini-tablets
+    padding-top: 75px
+    padding-bottom: 75px
+  @include mini-phones
+    padding-top: 60px
+    padding-bottom: 60px
+  &-title
+    font-size: 64px
+    margin-bottom: 100px
+    @include mini-tablets
+      font-size: 32px
+      margin-bottom: 50px
+      flex-wrap: wrap
+  &-heading
+    @include mini-tablets
+      width: 100%
+      margin-top: 20px
+  &-head
+    font-size: 36px
+    margin-left: 60px
+    cursor: pointer
+    &::after
+      content: ''
+      width: 44px
+      height: 44px
+      border-radius: 50%
+      border: 6px solid #0E2E29
+      background: transparent
+      transition: background 0.5s
+      margin-left: 20px
+    &.active, &:hover
+      &::after
+        background: #1EEBCD
+    @include mini-tablets
+      font-size: 18px
+      margin-left: 0
+      margin-right: 30px
+  &-tab
+    gap: 30px
+    @include laptop
+      flex-wrap: wrap
+      gap: 20px
+  &-card
+    border: 3px solid #1EEBCD
+    border-radius: 10px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 30px
+    padding: 30px
+    width: calc(25% - 15px)
+    transition: all 0.5s
+    @include laptop
+      width: calc(50% - 10px)
+      background-color: #0E2E29
+      border-color: #0E2E29
+    @include mini-tablets
+      width: 100%
+      padding: 20px
+    &-title
+      font-size: 36px
+      font-weight: 700
+      @include mini-tablets
+        font-size: 24px
+    &-price
+      color: #1EEBCD
+      font-size: 64px
+      font-weight: 700
+    &-list
+      text-align: center
+      font-size: 24px
+      width: 100%
+      & li
+        padding: 15px 0
+        width: 100%
+        border-bottom: 2px solid #0E2E29
+        &:first-child
+          padding-top: 0
+      @include mini-tablets
+        font-size: 18px
+    &-btn
+      width: 100%
+      box-shadow: unset
+    &--invert, &:hover
+      color: #020E0C
+      background-color: #1EEBCD
+      & .pricing-card-price
+        color: #020E0C
+      & .pricing-card-list
+        & li
+          border-color: #020E0C
+      & .btn
+        background-color: #020E0C
+        border-color: #020E0C
+        color: #fff
+        &--outline
+          background-color: #1EEBCD
+          color: #020E0C

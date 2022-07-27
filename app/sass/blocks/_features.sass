@@ -1,0 +1,206 @@
+.features
+  padding-top: 100px
+  padding-bottom: 100px
+  background: url(../img/polygon.svg) left center no-repeat
+  background-size: auto
+  position: relative
+  &--nobg
+    background: unset
+  @include mini-tablets
+    padding-top: 75px
+    padding-bottom: 75px
+  @include mini-phones
+    padding-top: 60px
+    padding-bottom: 60px
+  &-title
+    font-size: 64px
+    font-feature-settings: 'pnum' on, 'lnum' on
+    margin-bottom: 80px
+    &--green
+      color: #1EEBCD
+    @include mini-tablets
+      font-size: 32px
+      margin-bottom: 50px
+  &-row
+    gap: 65px
+    margin-bottom: 100px
+    &:nth-of-type(2)
+      flex-direction: row-reverse
+      & .features-container
+        &::before
+          border-image: linear-gradient(128.78deg, #BEFFF6 12.58%, #020E0C 52%) 1
+    &:last-of-type
+      & .features-container
+        max-width: 630px
+        &::before
+          border-image: linear-gradient(144.24deg, #BEFFF6 30.97%, #020E0C 57.27%) 1
+        @include laptop
+          max-width: 100%
+    @include laptop
+      margin-bottom: 65px
+      flex-direction: column-reverse
+      &:nth-of-type(2)
+        flex-direction: column-reverse
+    @include mini-tablets
+      margin-bottom: 50px
+  &-container
+    position: relative
+    border-radius: 10px 0px 0px 0px
+    z-index: 2
+    overflow: hidden
+    padding: 60px
+    max-width: 740px
+    display: flex
+    flex-direction: column
+    gap: 60px
+    font-size: 24px
+    @include laptop
+      width: 100%
+      max-width: 100%
+    @include mini-tablets
+      padding: 30px
+      gap: 30px
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: -1
+      margin: 2px
+      background: linear-gradient( rgba(2, 14, 21, 0.01), rgba(2, 14, 21, 0.01))
+      background-clip: content-box
+      backdrop-filter: blur(40px)
+      border: 3px solid
+      border-image: linear-gradient(42.84deg, #BEFFF6 15.35%, #020E0C 62.05%) 1
+    & strong
+      font-size: 36px
+    & a
+      & span
+        color: #1EEBCD
+        font-weight: 700
+        text-decoration: underline
+    @include mini-tablets
+      padding: 30px
+      gap: 30px
+      font-size: 18px
+      &::before
+        border-image: linear-gradient(73.33deg, #BEFFF6 25.24%, #020E0C 109.64%) 1 !important
+      & strong
+        font-size: 24px
+    @include mini-phones
+      padding: 0
+      &::before
+        display: none
+  &-columns
+    gap: 86px
+    @include laptop
+      gap: 0
+      flex-wrap: wrap
+  &-column
+    width: calc(50% - 43px)
+    @include laptop
+      width: 100%
+    & h4
+      color: #1EEBCD
+      font-feature-settings: 'pnum' on, 'lnum' onf
+      font-size: 64px
+    & strong
+      display: block
+      margin: 60px 0
+      font-size: 36px
+    & p
+      font-size: 24px
+      margin-bottom: 20px
+    &:nth-of-type(2)
+      & .features-btn
+        display: none
+        @include laptop
+          display: block
+          margin-top: 60px
+        @include mini-tablets
+          margin-top: 30px
+    @include mini-tablets
+      & h4
+        font-size: 32px
+      & strong
+        font-size: 24px
+        margin: 30px 0
+      & p
+        font-size: 18px
+        margin-bottom: 0
+  &-btn
+    width: 100%
+    @include laptop
+      display: none
+  &-cards
+    gap: 30px
+    @include laptop
+      gap: 20px
+    & .features-title
+      margin-bottom: 30px
+      width: 100%
+    &--pro
+      & .features-card
+        background: #107C6C
+        & img
+          background: #0E2E29
+        & h2
+          color: #fff
+        & a
+          background: #1EEBCD
+          border-color: #1EEBCD
+        &:nth-of-type(1), &:nth-of-type(2)
+          width: calc(50% - 15px)
+        &:nth-of-type(4)
+          width: calc(66.67% - 10px)
+        &:nth-of-type(3)
+          width: calc(33.33% - 20px)
+        @include laptop
+          width: calc(50% - 10px)
+          &:nth-of-type(3n)
+            width: 100%
+          &:nth-of-type(4)
+            width: calc(50% - 10px)
+  &-card
+    width: calc(33.33% - 20px)
+    padding: 30px
+    background: #0E2E29
+    border-radius: 20px
+    display: flex
+    flex-direction: column
+    & img
+      width: 100%
+      height: 277px
+      object-fit: cover
+      background: #020E0C
+      border-radius: 10px
+    & h2
+      margin: 20px 0
+      color: #1EEBCD
+      font-feature-settings: 'pnum' on, 'lnum' on
+      font-size: 36px
+    & p
+      font-size: 24px
+      margin-bottom: 30px
+    & a
+      width: 100%
+      margin-top: auto
+      border-color: #1EEBCD
+    &:nth-of-type(2)
+      width: calc(66.67% - 10px)
+    &:nth-of-type(3), &:nth-of-type(4)
+      width: calc(50% - 15px)
+    @include laptop
+      width: calc(50% - 10px)
+      &:nth-of-type(2)
+        width: calc(50% - 10px)
+      &:nth-of-type(3n)
+        width: 100%
+    @include mini-tablets
+      width: 100% !important
+      & h2
+        font-size: 24px
+      & p
+        font-size: 18px

@@ -1,0 +1,46 @@
+.needs
+  padding-top: 100px
+  padding-bottom: 100px
+  @include mini-tablets
+    padding-top: 75px
+    padding-bottom: 75px
+  &-title
+    font-size: 64px
+    font-feature-settings: 'pnum' on, 'lnum' on
+    margin-bottom: 100px
+    @include mini-tablets
+      font-size: 32px
+      margin-bottom: 50px
+      max-width: 253px  
+  &-row
+    display: flex
+    align-items: flex-start
+    gap: 30px
+    margin-bottom: 60px
+    @include max-tablets
+      flex-wrap: wrap
+    &:last-child
+      margin-bottom: 0
+    &-img
+      width: 190px
+      height: 190px
+      object-fit: cover
+      background: rgba(255, 255, 255, 0.1)
+      @include max-tablets
+        width: 300px
+        height: 300px
+      @include mini-tablets
+        width: 210px
+        height: 210px
+    & strong
+      font-size: 36px
+      color: #1EEBCD
+      font-feature-settings: 'pnum' on, 'lnum' on
+      margin-bottom: 20px
+      display: block
+      @include mini-tablets
+        font-size: 24px
+    & p
+      font-size: 24px
+      @include mini-tablets
+        font-size: 18px
