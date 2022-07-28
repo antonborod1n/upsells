@@ -9,11 +9,25 @@
   &__list
     background: #020e0c
     border-radius: 10px
+    padding-bottom: 20px
+    &-items
+      padding: 10px 10px 10px 50px
+      position: relative
+      &::before
+        content: url(../images/artical-icon.svg)
+        position: absolute
+        width: 24px
+        left: 16px
+        top: 16px
   &__item
     flex-basis: 400px
     background: #0e2e29
     border-radius: 10px
     padding: 0 15px 15px 15px
+    &-box
+      padding: 20px 10px
+    &-link
+      margin-left: 19px
   &__numb
     font-size: 12px
     border-radius: 50%
@@ -24,11 +38,3 @@
     display: flex
     justify-content: center
     align-items: center
-  &__item-box 
-    padding: 20px 10px
-  &__title
-    padding-left: 30px
-  &__list-items
-    padding: 10px 10px 10px 25px
-  &__list
-    padding-bottom: 20px
