@@ -1,0 +1,21 @@
+.breadcrumbs
+    margin-bottom: 20px
+    &__item
+        padding-right: 40px
+        position: relative
+        &:last-child
+            color: #1eebcd
+            padding-right: 0px
+            &::after
+                display: none
+        &::after
+            content: ''
+            position: absolute
+            right: 16px
+            top: 8px
+            width: 9px
+            height: 18px
+            background-image: url(../images/arrow-bredacrumbs-right.svg)
+            background-repeat: no-repeat
+    &__link
+        color: inherit

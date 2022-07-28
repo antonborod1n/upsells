@@ -56,6 +56,12 @@
       object-fit: contain 
   &-menu
     font-size: 24px
+    &__link
+      transition: all 0.1s
+      padding-bottom: 5px
+      &:hover
+        border-bottom: 2px solid #1eebcd
+        transition: all 0.1s
     & ul
       gap: 60px
       @include laptop
@@ -74,7 +80,7 @@
       content: ''
       width: 24px
       height: 24px
-      background: url(../img/login.svg) center center no-repeat
+      background: url(../images/login.svg) center center no-repeat
       background-size: contain
       margin-left: 10px
     @include mini-desktop 
