@@ -111,14 +111,26 @@ body
   font-weight: 700
   display: inline-block
   border: 3px solid rgba(30, 235, 205, 0.6)
-  &--outline
+  transition: all .3s
+  cursor: pointer
+  &--outline,
+  &:hover
     color: #fff
     border-color: #FFFFFF
-    border-radius: 10px
     background: transparent
     box-shadow: unset
+    transition: all .3s
   @include mini-tablets
     width: 100%
     font-size: 14px
   @include mini-phones
     padding: 20px
+
+//text link
+
+.decor-text-link
+  color: #1EEBCD
+  transition: all .3s
+  &:hover
+    transition: all .3s
+    text-decoration: underline
