@@ -23,6 +23,8 @@
     padding: 0 15px 15px 15px
     &-box
       padding: 20px 10px
+      @include phones 
+      flex-wrap: wrap
   &__numb
     font-size: 12px
     border-radius: 50%
@@ -32,7 +34,7 @@
     min-height: 30px
     margin-left: 10px
   &__title
-      font-size: 20px
+    font-size: 20px
 
 .img-box
   margin-right: 10px
