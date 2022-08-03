@@ -33,68 +33,74 @@
     <!-- /.header-container -->
   </header>
   <!-- /.header -->
-
   <main class="main">
-    <section class="my-account">
-      <div class="my-account__inner d-flex space-between">
-        <div class="my-account__login">
-          <div class="my-account-card form">
-            <div class="my-account-title d-flex space-between align-item-center">
-              <h2>Login</h2>
-            </div>
 
-            <form action="#" method="post" id="form-login">
-              <p class="form__text"> 
-                <label for="username">Username or email address&nbsp;<span>*</span></label>
-                <input type="text" name="username" id="username" autocomplete="username" value="" required>
-              </p>
-              <p class="form__text">
-                <label for="password">Password&nbsp;<span>*</span></label>
-                <span><input type="password" name="password" id="password"
-                    autocomplete="current-password" required><span></span></span>
-              </p>
-              <p class="form__text">
-                <input type="hidden" id="login-nonce" name="login-nonce" value="cc8658d1e9">
-                <input type="hidden" name="http_referer" value="my-account">
-                <button class="btn" type="submit" name="login" value="Log in">Login</button>
-              </p>
-              <p class="form__text">
-                <label>
-                  <input name="rememberme" type="checkbox" id="rememberme" value="forever"><span
-                    style="vertical-align: middle;">Remember me</span>
-                </label>
-                <span>
-                  <a href="#">Lost your password?</a>
-                </span>
-              </p>
-            </form>
-          </div>
+    <!-- /.account -->
+    <section class="account">
+
+      <div class="breadcrumbs">
+        <ol class="breadcrumbs__list d-flex align-item-center center flex-wrap">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Home
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              My account
+            </a>
+          </li>
+        </ol>
+      </div>
+      <h1 class="account-title">My account</h1>
+
+      <div class="account__inner d-flex flex-wrap">
+        <div class="account__menu">
+          <nav class="user-menu">
+            <ul class="account__list list-circle">
+              <li class="account__item">
+                <a class="account__link" href="#">
+                  Dashboard
+                </a>
+              </li>
+              <li class="account__item">
+                <a class="account__link" href="#">
+                  Orders
+                </a>
+              </li>
+              <li class="account__item">
+                <a class="account__link" href="#">
+                  Downloads
+                </a>
+              </li>
+              <li class="account__item">
+                <a class="account__link" href="#">
+                  Account details
+                </a>
+              </li>
+              <li class="account__item">
+                <a class="account__link" href="#">
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="account__content">
+          <p class="account__text">
+            Hello <strong>username</strong> (not <strong>username?</strong> 
+            <a class="account__link decor-text-link" href="#">Log out</a>)
+          </p>
+          <p class="account__text">
+            From your account dashboard you can view your <a class="account__link decor-text-link">recent orders</a>and 
+            <a class="account__link decor-text-link">edit your password and account details.</a>
+          </p>
+          <p class="account__text">
+            <a class="account__link decor-text-link" href="#">How to install PRO version</a>
+          </p>
         </div>
 
-        <div class="my-account__reg">
-          <div class="my-account-card form">
-            <div class="my-account-title d-flex space-between align-item-center">
-              <h2>Register</h2>
-            </div>
-
-            <form action="#" method="post" id="form-reg"> 
-              <p class="form__text">
-                <label for="reg_email">Email address&nbsp;<span>*</span></label>
-                <input type="email" name="email" id="reg_email" autocomplete="email" value="" required>
-              </p>
-              <div class="form__text">
-                <p>Your personal data will be used to support your experience throughout this website, to manage
-                  access
-                  to your account, and for other purposes described in our <a href="#" target="_blank">privacy policy</a>.</p>
-              </div>
-              <p class="form__text">
-                <input type="hidden" id="register-nonce" name="register-nonce"
-                  value="a62aabc674"><input type="hidden" name="http_referer" value="my-account">
-                <button type="submit" class="btn" name="register" value="Register">Register</button>
-              </p>
-            </form>
-          </div>
-        </div>
+      </div>
     </section>
 
     <!-- /.features -->
