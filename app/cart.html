@@ -36,42 +36,96 @@
 
   <main class="main">
     <section class="cart">
-      <div class="my-account__inner d-flex space-between">
-        <div class="my-account__login">
-          <div class="my-account-card form">
-            <div class="my-account-title d-flex space-between align-item-center">
-              <h2>Login</h2>
-            </div>
+      <div class="cart__inner d-flex space-between">
+        <div class="cart-card form">
+          <h1 class="hero-title">Cart</h1>
 
-            <form action="#" method="post" id="form-login">
-              <p class="form__text"> 
-                <label for="username">Username or email address&nbsp;<span>*</span></label>
-                <input type="text" name="username" id="username" autocomplete="username" value="" required>
-              </p>
-              <p class="form__text">
-                <label for="password">Password&nbsp;<span>*</span></label>
-                <span><input type="password" name="password" id="password"
-                    autocomplete="current-password" required><span></span></span>
-              </p>
-              <p class="form__text">
-                <input type="hidden" id="login-nonce" name="login-nonce" value="cc8658d1e9">
-                <input type="hidden" name="http_referer" value="my-account">
-                <button class="btn" type="submit" name="login" value="Log in">Login</button>
-              </p>
-              <p class="form__text">
-                <label>
-                  <input name="rememberme" type="checkbox" id="rememberme" value="forever"><span
-                    style="vertical-align: middle;">Remember me</span>
-                </label>
-                <span>
-                  <a href="#">Lost your password?</a>
-                </span>
-              </p>
-            </form>
+          <form class="cart-form" action="#" method="post">
+            <table class="cart-form__contents" cellspacing="0">
+              <thead>
+                <tr>
+                  <th class="product-remove">&nbsp;</th>
+                  <th class="product-thumbnail">&nbsp;</th>
+                  <th class="product-name">Product</th>
+                  <th class="product-price">Price</th>
+                  <th class="product-quantity">Quantity</th>
+                  <th class="product-subtotal">Total</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="cart__item">
+                  <td class="product-remove">
+                    <a href="#">
+                      <img src="./images/delete.svg" alt="delete">
+                    </a>
+                  </td>
+
+                  <td class="product-thumbnail">
+                    <a href="#">
+                      <img width="100" height="100" src="" alt="">
+                    </a>
+                  </td>
+
+                  <td class="product-name" data-title="Product">
+                    <a href="#">WupSales - Reward Points for WooCommerce - Yearly Unlimited domains
+                    </a>
+                  </td>
+
+                  <td class="product-price" data-title="Price">
+                    <span><bdi><span>$</span>199.00</bdi></span>
+                  </td>
+
+                  <td class="product-quantity" data-title="Quantity">
+                    <div class="cart__quantity">
+                      <input type="number" id="quantity_62ea980e7099e" class="input-text qty text" step="1" min="0"
+                        max="" name="cart[982fe60b71ad915b4dba1db9c629d26f][qty]" value="1" title="Qty" size="4"
+                        pattern="[0-9]*" inputmode="numeric"
+                        aria-labelledby="WupSales - Reward Points for WooCommerce - Yearly Unlimited domains quantity">
+                    </div>
+                  </td>
+
+                  <td class="product-subtotal" data-title="Total">
+                    <span><bdi><span>$</span>199.00</bdi></span>
+                  </td>
+                </tr>
+                <tr>
+              </tbody>
+            </table>
+
+            <div class="cart__bottom d-flex">
+              <input type="text" name="coupon_code" id="coupon_code" value="" placeholder="Coupon code">
+              <button type="submit" class="cart__bottom-btn btn" name="apply_coupon" value="Apply coupon">
+                Apply coupon
+              </button>
+              <button type="submit" class="cart__bottom-btn btn" name="update_cart" value="Update cart" disabled=""
+                aria-disabled="true">
+                Update cart
+              </button>
+            </div>
+          </form>
+
+          <div class="cart__totals">
+            <div>
+              <h2>Cart totals</h2>
+              <table cellspacing="0" class="cart__totals-box">
+                <tbody>
+                  <tr class="cart__totals-tr">
+                    <th>Subtotal</th>
+                    <td data-title="Subtotal"><span><bdi><span>$</span>199.00</bdi></span></td>
+                  </tr>
+                  <tr class="cart__totals-tr">
+                    <th>Total</th>
+                    <td data-title="Total"><strong><span><bdi><span>$</span>199.00</bdi></span></strong></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div>
+                <a href="№" class="btn">Proceed to checkout</a>
+              </div>
+            </div>
           </div>
         </div>
-
-        
     </section>
 
     <!-- /.features -->
